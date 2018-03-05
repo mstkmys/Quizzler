@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		68AC689F204D41FA003238F4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68AC689E204D41FA003238F4 /* AppDelegate.swift */; };
 		68AC68A1204D41FA003238F4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68AC68A0204D41FA003238F4 /* ViewController.swift */; };
-		68AC68A4204D41FA003238F4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 68AC68A2204D41FA003238F4 /* Main.storyboard */; };
 		68AC68A6204D41FA003238F4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 68AC68A5204D41FA003238F4 /* Assets.xcassets */; };
 		68AC68A9204D41FA003238F4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 68AC68A7204D41FA003238F4 /* LaunchScreen.storyboard */; };
 		68AC68B4204D41FA003238F4 /* QuizzlerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68AC68B3204D41FA003238F4 /* QuizzlerTests.swift */; };
@@ -37,7 +36,6 @@
 		68AC689B204D41FA003238F4 /* Quizzler.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Quizzler.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		68AC689E204D41FA003238F4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		68AC68A0204D41FA003238F4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		68AC68A3204D41FA003238F4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		68AC68A5204D41FA003238F4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		68AC68A8204D41FA003238F4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		68AC68AA204D41FA003238F4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -97,11 +95,9 @@
 		68AC689D204D41FA003238F4 /* Quizzler */ = {
 			isa = PBXGroup;
 			children = (
+				68AC68CC204D4294003238F4 /* Resources */,
+				68AC68CD204D42A7003238F4 /* Classes */,
 				68AC689E204D41FA003238F4 /* AppDelegate.swift */,
-				68AC68A0204D41FA003238F4 /* ViewController.swift */,
-				68AC68A2204D41FA003238F4 /* Main.storyboard */,
-				68AC68A5204D41FA003238F4 /* Assets.xcassets */,
-				68AC68A7204D41FA003238F4 /* LaunchScreen.storyboard */,
 				68AC68AA204D41FA003238F4 /* Info.plist */,
 			);
 			path = Quizzler;
@@ -123,6 +119,47 @@
 				68AC68C0204D41FA003238F4 /* Info.plist */,
 			);
 			path = QuizzlerUITests;
+			sourceTree = "<group>";
+		};
+		68AC68CC204D4294003238F4 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				68AC68A5204D41FA003238F4 /* Assets.xcassets */,
+				68AC68A7204D41FA003238F4 /* LaunchScreen.storyboard */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		68AC68CD204D42A7003238F4 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				68AC68D0204D42C3003238F4 /* Views */,
+				68AC68CF204D42BC003238F4 /* Controllres */,
+				68AC68CE204D42B5003238F4 /* Extensions */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		68AC68CE204D42B5003238F4 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		68AC68CF204D42BC003238F4 /* Controllres */ = {
+			isa = PBXGroup;
+			children = (
+				68AC68A0204D41FA003238F4 /* ViewController.swift */,
+			);
+			path = Controllres;
+			sourceTree = "<group>";
+		};
+		68AC68D0204D42C3003238F4 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -234,7 +271,6 @@
 			files = (
 				68AC68A9204D41FA003238F4 /* LaunchScreen.storyboard in Resources */,
 				68AC68A6204D41FA003238F4 /* Assets.xcassets in Resources */,
-				68AC68A4204D41FA003238F4 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -296,14 +332,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		68AC68A2204D41FA003238F4 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				68AC68A3204D41FA003238F4 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		68AC68A7204D41FA003238F4 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -363,7 +391,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -414,7 +442,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -429,11 +457,12 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = WDFA67X5D5;
 				INFOPLIST_FILE = Quizzler/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = jp.mstk.Quizzler;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -444,11 +473,12 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = WDFA67X5D5;
 				INFOPLIST_FILE = Quizzler/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = jp.mstk.Quizzler;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
