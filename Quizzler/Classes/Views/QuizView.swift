@@ -15,6 +15,7 @@ class QuizView: UIView {
         let label = UILabel()
         label.text = "Question"
         label.textAlignment = .center
+        label.numberOfLines = 0
         
         return label
         
@@ -26,6 +27,8 @@ class QuizView: UIView {
         button.setTitle("TRUE", for: .normal)
         button.tintColor = .white
         button.backgroundColor = .blue
+        button.tag = 1
+        button.addTarget(self, action: #selector(ViewController.answerPressed(_:)), for: .touchUpInside)
         
         return button
         
@@ -37,6 +40,8 @@ class QuizView: UIView {
         button.setTitle("FALSE", for: .normal)
         button.tintColor = .white
         button.backgroundColor = .red
+        button.tag = 2
+        button.addTarget(self, action: #selector(ViewController.answerPressed(_:)), for: .touchUpInside)
         
         return button
         
@@ -89,6 +94,7 @@ class QuizView: UIView {
             leading: self.leadingAnchor,
             bottom: nil,
             trailing: self.trailingAnchor,
+            padding: .init(top: 20, left: 20, bottom: 20, right: 20),
             size: .init(width: 0, height: self.frame.size.height / 2)
         )
         
