@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AudioToolbox
 
 class ViewController: UIViewController {
     
@@ -22,14 +23,14 @@ class ViewController: UIViewController {
     let allQuestions = QuestionBank()
     var pickedAnswer = false
     var questionNum = 0
+    var score = 0
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
         [quizView].forEach{ self.view.addSubview($0) }
         
-        let firstQuestion = allQuestions.list.first
-        quizView.quizeLabel.text = firstQuestion?.quesiontText
+        nextQuestion()
         
     }
     
@@ -47,7 +48,41 @@ class ViewController: UIViewController {
         checkAnswer()
         
         questionNum += 1
-        quizView.quizeLabel.text = allQuestions.list[questionNum].quesiontText
+        
+        nextQuestion()
+        
+    }
+    
+    private func updataUI() {
+        
+        quizView.progressBar.frame.size.width = (self.view.frame.size.width / CGFloat(allQuestions.list.count)) * (CGFloat(questionNum + 1))
+        quizView.scoreLabel.text = "Score: \(score)"
+        quizView.progressLabel.text = "\(questionNum + 1) / \(allQuestions.list.count)"
+        
+    }
+    
+    private func nextQuestion() {
+        
+        if questionNum <= allQuestions.list.count - 1 {
+            
+            quizView.quizeLabel.text = allQuestions.list[questionNum].quesiontText
+            
+            updataUI()
+            
+        }
+        else {
+            
+            let alert = UIAlertController(title: "Awesome", message: "You finished. Restart?", preferredStyle: .alert)
+            
+            let restart = UIAlertAction(title: "Resatart", style: .default, handler: { _ in
+                self.startOver()
+            })
+            
+            alert.addAction(restart)
+            
+            self.present(alert, animated: true, completion: nil)
+            
+        }
         
     }
     
@@ -56,11 +91,20 @@ class ViewController: UIViewController {
         let correctAnswer = allQuestions.list[questionNum].answer
         
         if correctAnswer == pickedAnswer {
-            print("You correct")
+//            AudioServicesPlaySystemSound(SystemSoundID(1013))
+            score += 1
         }
         else {
             print("wrong!")
         }
+        
+    }
+    
+    private func startOver() {
+        
+        questionNum = 0
+        score = 0
+        nextQuestion()
         
     }
 

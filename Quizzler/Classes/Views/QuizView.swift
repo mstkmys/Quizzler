@@ -121,7 +121,7 @@ class QuizView: UIView {
             leading: self.leadingAnchor,
             bottom: self.bottomAnchor,
             trailing: nil,
-            size: .init(width: 100, height: 20)
+            size: .init(width: 0, height: 20)
         )
         
         progressLabel.anchor(
