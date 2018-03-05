@@ -9,10 +9,21 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    let quizView: QuizView = {
+       
+        let quizView = QuizView(frame: UIScreen.main.bounds)
+        quizView.backgroundColor = .green
+        
+        return quizView
+        
+    }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        [quizView].forEach{ self.view.addSubview($0) }
+        
     }
 
 }

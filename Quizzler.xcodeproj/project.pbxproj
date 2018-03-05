@@ -13,6 +13,8 @@
 		68AC68A9204D41FA003238F4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 68AC68A7204D41FA003238F4 /* LaunchScreen.storyboard */; };
 		68AC68B4204D41FA003238F4 /* QuizzlerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68AC68B3204D41FA003238F4 /* QuizzlerTests.swift */; };
 		68AC68BF204D41FA003238F4 /* QuizzlerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68AC68BE204D41FA003238F4 /* QuizzlerUITests.swift */; };
+		68AC68D2204D45D3003238F4 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68AC68D1204D45D3003238F4 /* UIView.swift */; };
+		68AC68D5204D47C2003238F4 /* QuizView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68AC68D4204D47C2003238F4 /* QuizView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +47,8 @@
 		68AC68BA204D41FA003238F4 /* QuizzlerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QuizzlerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		68AC68BE204D41FA003238F4 /* QuizzlerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizzlerUITests.swift; sourceTree = "<group>"; };
 		68AC68C0204D41FA003238F4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		68AC68D1204D45D3003238F4 /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
+		68AC68D4204D47C2003238F4 /* QuizView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,6 +147,7 @@
 		68AC68CE204D42B5003238F4 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				68AC68D1204D45D3003238F4 /* UIView.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -158,6 +163,7 @@
 		68AC68D0204D42C3003238F4 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				68AC68D4204D47C2003238F4 /* QuizView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -296,6 +302,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				68AC68A1204D41FA003238F4 /* ViewController.swift in Sources */,
+				68AC68D5204D47C2003238F4 /* QuizView.swift in Sources */,
+				68AC68D2204D45D3003238F4 /* UIView.swift in Sources */,
 				68AC689F204D41FA003238F4 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
