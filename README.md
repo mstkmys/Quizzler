@@ -6,7 +6,7 @@
 )](https://developer.apple.com/swift)
 [![Twitter](https://img.shields.io/badge/twitter-@mstkmys-blue.svg?style=flat)](https://twitter.com/mstkmys)
 
-This app is quiz application.
+![demo](https://user-images.githubusercontent.com/12792235/37013545-e37b7358-213d-11e8-9119-b8a70879985c.gif)
 
 ## Author
 **Masataka Miyoshi**
